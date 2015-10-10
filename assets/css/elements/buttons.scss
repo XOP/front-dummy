@@ -1,0 +1,141 @@
+/* Buttons
+---------------------------------------------------------------------------------- */
+
+/*
+Buttons
+
+markup:
+<sg-insert>2.1</sg-insert><br/>
+<sg-insert>2.2</sg-insert><br/>
+<sg-insert>2.3</sg-insert>
+
+Styleguide 2
+*/
+
+/* Vars
+-------------------------------------------------- */
+
+$button-height: 50px;
+$button-width: 50px;
+$button-rad: $rad-moder;
+
+/* /Vars */
+
+
+/* Regular
+-------------------------------------------------- */
+
+/*
+Button regular
+
+markup:
+<div class="button">
+    Button regular
+</div>
+
+Styleguide 2.1
+*/
+
+.button {
+	position: relative;
+
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 $grid-2;
+	min-width: $button-width;
+	height: $button-height;
+
+	cursor: pointer;
+	white-space: nowrap; // IE multiple words bug
+	overflow: visible;
+	border-radius: $button-rad;
+	border: 0;
+
+	font: bold $fs-l/$button-height $ff-main;
+	color: $c-base;
+	background: $c-gray;
+
+	outline: none;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: -.05ex;
+
+	transition: background .2s ease;
+
+	&:hover {
+		color: $c-base;
+		background: $c-gray-dark;
+		}
+
+	&:active {
+		transform: translateY(1px);
+		}
+
+	&:focus {
+		box-shadow: 0 0 0 4px $c-yellow;
+		}
+
+	a&, span&, div& {
+		display: inline-block;
+		vertical-align: bottom;
+		text-decoration: none;
+		}
+
+	input&,
+	button& {
+		-webkit-appearance: none; // remove OS-native styling
+		}
+	}
+
+/* /Regular */
+
+
+/* Full width
+-------------------------------------------------- */
+
+/*
+Button full width
+
+markup:
+<div class="button button__full">
+    Button full width
+</div>
+
+Styleguide 2.2
+*/
+
+.button__full {
+	width: 100%;
+	}
+
+/* /Full width */
+
+
+/* Call to action
+-------------------------------------------------- */
+
+/*
+Button call to action
+
+markup:
+<div class="button button__cta">
+    Button call to action
+</div>
+
+Styleguide 2.3
+*/
+
+.button__cta {
+	background: $c-blue;
+	color: $c-white;
+
+	&:hover {
+		background: $c-blue-dark;
+		color: $c-white;
+		}
+	}
+
+/* /Call to action */
+
+/* /Buttons
+---------------------------------------------------------------------------------- */

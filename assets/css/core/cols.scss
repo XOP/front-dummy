@@ -1,0 +1,57 @@
+/* Columns
+---------------------------------------------------------------------------------- */
+
+.cols {
+	display: block;
+
+	@media(--m){
+		display: flex;
+		flex-direction: row;
+		}
+	}
+
+.col {
+	box-sizing: border-box;
+	flex: 1 1 $col;
+
+	min-width: $col;
+	max-width: $col;
+
+	& + & {
+		margin: $grid 0 0;
+		}
+
+	@media(--m){
+
+		& + & {
+			margin: 0 0 0 $col-gap;
+			}
+		}
+	}
+
+//
+// define column system
+// col__2, col__3, ... col__12
+
+@define-mixin col $size {
+	min-width: 100%;
+
+	@media(--m) {
+		min-width: $col;
+		max-width: 100%;
+		width: calc($col * $size + $col-gap * ($size - 1));
+		}
+
+	@media(--n) {
+		max-width: calc($col * $size + $col-gap * ($size - 1));
+		}
+	}
+
+@for $i from 2 to 12 {
+	.col__$i {
+		@mixin col $i;
+		}
+	}
+
+/* /Columns
+---------------------------------------------------------------------------------- */

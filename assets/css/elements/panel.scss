@@ -1,0 +1,27 @@
+/* Panel
+---------------------------------------------------------------------------------- */
+
+/*
+Panel
+
+markup:
+<div class="panel">
+	Panel content
+</panel>
+
+Styleguide 5
+*/
+
+.panel {
+	padding: $grid $offset-4;
+    background: $c-white;
+
+	@media(--s) {
+		padding: $grid 0;
+		margin-bottom: $grid-2;
+		box-shadow: $sh-light;
+		}
+    }
+
+/* /Panel
+---------------------------------------------------------------------------------- */

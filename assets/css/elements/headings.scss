@@ -1,0 +1,78 @@
+/* Headings
+---------------------------------------------------------------------------------- */
+
+/*
+Headings
+
+markup:
+<sg-insert>3.1</sg-insert>
+<sg-insert>3.2</sg-insert>
+<sg-insert>3.3</sg-insert>
+
+Styleguide 3
+*/
+
+/* Core
+-------------------------------------------------- */
+
+/*
+Heading common
+
+markup:
+<div class="heading">
+    Common heading
+</span>
+
+Styleguide 3.1
+*/
+
+.heading {
+    @mixin font-smoothing;
+
+    font-family: $ff-alt;
+    font-size: $fs-h1;
+    text-transform: uppercase;
+    line-height: $lh-head;
+    }
+
+/* /Core */
+
+
+/* Mods
+-------------------------------------------------- */
+
+/*
+Heading main
+
+markup:
+<div class="heading heading__main">
+    Main heading
+</span>
+
+Styleguide 3.2
+*/
+
+.heading__main {
+    color: $c-base;
+    font-weight: bold;
+    }
+
+/*
+Heading sub
+
+markup:
+<div class="heading heading__sub">
+    Sub heading
+</span>
+
+Styleguide 3.3
+*/
+
+.heading__sub {
+    color: $c-brand-main;
+    }
+
+/* /Mods */
+
+/* /Headings
+---------------------------------------------------------------------------------- */

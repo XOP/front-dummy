@@ -1,0 +1,23 @@
+/* Header
+---------------------------------------------------------------------------------- */
+
+/*
+cssg
+
+	header
+		<hero>
+		<nav-tabs>
+*/
+
+
+.header {
+	position: relative;
+	box-sizing: border-box;
+	min-height: $fs-hero;
+	overflow: hidden;
+
+	background: $c-brand-main;
+	}
+
+/* /Header
+---------------------------------------------------------------------------------- */

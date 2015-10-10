@@ -1,0 +1,37 @@
+/* Hero heading
+---------------------------------------------------------------------------------- */
+
+/*
+Hero
+
+markup:
+<div class="hero">Hero title</div>
+
+Styleguide 4
+*/
+
+.hero {
+    @mixin font-smoothing;
+
+    padding: $grid-2;
+
+    font-family: $ff-main;
+    font-size: calc($fs-hero / 1.5);
+    font-weight: bold;
+    line-height: $lh-hero;
+    color: $c-white;
+    text-shadow: $sh-normal;
+    text-align: center;
+
+
+	@media (--s) {
+        font-size: calc($fs-hero / 1.2);
+		}
+
+	@media (--n) {
+		font-size: $fs-hero;
+		}
+    }
+
+/* /Hero heading
+---------------------------------------------------------------------------------- */

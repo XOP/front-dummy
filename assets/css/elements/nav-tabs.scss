@@ -1,0 +1,62 @@
+/* Navigation tabbed
+---------------------------------------------------------------------------------- */
+
+/*
+cssg
+
+	nav-tabs
+		ul . nav-tabs_lst
+			li . nav-tabs_i +
+				a . nav-tabs_a			__active
+*/
+
+.nav-tabs {
+    @mixin font-smoothing;
+
+    font-size: $fs-l;
+    text-transform: uppercase;
+    background: $c-gray-dark;
+    text-align: center;
+    }
+
+.nav-tabs_lst {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: row;
+	align-items: stretch;
+
+	@media(--s) {
+		display: block;
+		}
+    }
+
+.nav-tabs_i {
+	flex: 1 0 auto;
+
+	@media(--s) {
+		display: inline-block;
+		vertical-align: middle;
+		}
+    }
+
+.nav-tabs_a {
+    display: block;
+    padding: $offset-3 $offset-5;
+    color: $c-light;
+    text-decoration: none;
+    transition: background .2s ease;
+
+    &:hover {
+        color: $c-lighter;
+        background: $c-gray;
+        }
+
+    &.__active {
+        background: $c-gray-light;
+        color: $c-base;
+        }
+    }
+
+
+/* /Navigation tabbed
+---------------------------------------------------------------------------------- */
