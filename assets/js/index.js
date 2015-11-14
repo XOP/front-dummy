@@ -3,15 +3,18 @@
  *
  */
 
-var utils = require('utils');
-var app = require('app/app');
+var utils = require('utils')();
+var app = require('app');
 
 app();
 
+
 // do not click that button
 var button = utils.find('.button');
-button.addEventListener('click', function(){
+
+button.addEventListener('click', function() {
     var elem = utils.find('.js-main-cont');
+
     elem.parentNode.removeChild(elem);
 
     // remove listeners

@@ -1,4 +1,4 @@
-module.exports = function(){
+module.exports = function() {
 
     /**
      * Returns first element that matches CSS selector {expr}.
@@ -9,7 +9,7 @@ module.exports = function(){
      * @returns {Node}
      */
     function find(expr, container) {
-        return typeof expr === "string" ? (container || document).querySelector(expr) : expr || null;
+        return typeof expr === 'string' ? (container || document).querySelector(expr) : expr || null;
     }
 
 
@@ -29,5 +29,5 @@ module.exports = function(){
     return {
         find: find,
         findAll: findAll
-    }
-}();
+    };
+};

@@ -22,13 +22,27 @@ var config = {
     },
     module: {
         noParse: [],
+        preLoaders: [
+            {
+                test: /\.jsx$|\.js$/,
+                include: [
+                    path.resolve(__dirname, 'assets/js')
+                ],
+                exclude: [
+                    /bundle\.js$/
+                ],
+                loader: 'eslint-loader'
+            }
+        ],
         loaders: [
             {
-                test: /\.js(x)?$/,
-                exclude: /node_modules/,
-                loader: 'eslint-loader'
+                test: /\.jsx$|\.js$/,
+                loaders: [
+                    'babel-loader?' + JSON.stringify({presets: ['es2015', 'react']}),
+                    'imports-loader?React=react&ReactDOM=react-dom'
+                ],
+                exclude: /node_modules/
             },
-            {test: /\.jsx$/, loaders: ['jsx-loader', 'imports-loader?React=react&ReactDOM=react-dom']},
             {test: /\.json$/, loaders: ['json-loader']}
         ]
     },

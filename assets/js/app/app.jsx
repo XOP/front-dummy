@@ -3,16 +3,16 @@
  *
  */
 
-var utils = require('utils');
+var utils = require('utils')();
 
-module.exports = function(){
+module.exports = function() {
 
     var mainContainer = utils.find('.js-main-cont');
-    React.render(
+
+    ReactDOM.render(
         <div>
             <strong>Hello from React</strong>
         </div>,
         mainContainer
     );
-
 };
