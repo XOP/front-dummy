@@ -1,7 +1,27 @@
 {
   "name": "front-dummy",
-  "version": "1.0.0",
-  "author": "stewiekillsloiss@gmail.com",
+  "version": "1.5.0",
+  "description": "Kickstart you new front-end app",
+  "main": "asets/js/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "gulp build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/front-dummy.git"
+  },
+  "keywords": [
+    "bootstrap",
+    "front-end",
+    "project",
+    "kickstart"
+  ],
+  "author": "Evgeny Khoroshilov <stewiekillsloiss@gmail.com> (https://github.com/XOP)",
+  "bugs": {
+    "url": "https://github.com/XOP/front-dummy/issues"
+  },
+  "homepage": "https://github.com/XOP/front-dummy#readme",
   "dependencies": {
     "normalize.css": "^3.0.3"
   },
