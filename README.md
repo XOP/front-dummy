@@ -23,12 +23,6 @@
 npm i
 ```
 
-### Optional
-
-```
-npm dedupe
-```
-
 
 ## Build modes
 
